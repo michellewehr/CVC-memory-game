@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.heading {
+  text-align: center;
+  padding: 1rem;
+}
+body {
+  color: #06336e;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+h1 {
+  font-size: 2.5rem;
+  padding-bottom: 0.8rem;
+}
+h2 {
+  color: #1b4c8d;
+}
+p {
+  font-size: 3rem;
+  padding-top: 1.5rem;
+}
+.memory-game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 60vh;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  perspective: 1000px;
+  text-align: center;
+}
+.memory-card {
+  display: flex;
+  border: 2px solid #488fee;
+  border-radius: 1.5rem;
+  background: none;
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transition: transform 0.5s;
+  text-align: center;
+}
+
+.front-face {
+  background: url(.//images/small_polkadots.jpg);
+}
+
+.back-face {
+  background: #fff;
+}
+
+.front-face,
+.back-face {
+  height: 100%;
+  width: 100%;
+  border-radius: 1.5rem;
+  position: absolute;
+  text-align: center;
+  padding-top: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.card-image {
+  padding: auto;
+  border-radius: 1.5rem;
+}
+.card-text {
+  letter-spacing: 0.25rem;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+.memory-card.flip {
+  transform: scale(0.95);
+}
+.smiley {
+  height: 100%;
+  width: 100%;
+  border-radius: 1.5rem;
+  background-color: #9cc0f0;
+  background-image: url(.//images/small_smiley.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
